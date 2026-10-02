@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Premo Rice | Official Site</title>
+<meta name="description" content="Premo Rice (Mr. Rice, The Bishop): funk, soul and hip hop from Prince George's County, Maryland. Music, tour dates and merch.">
+<meta property="og:title" content="Premo Rice">
+<meta property="og:description" content="Music, tour dates and merch.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#24102e;--panel:#33173f;--ink:#f6ecd9;--mute:#bfa9c9;--gold:#ffb81c;--coral:#ff5a76;--line:#55306a}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:17px/1.6 "DM Sans",system-ui,sans-serif}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+header{position:sticky;top:0;z-index:5;background:rgba(36,16,46,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;height:56px}
+.logo{font-family:"Alfa Slab One",serif;text-decoration:none;font-size:20px;color:var(--gold)}
+nav a{margin-left:18px;text-decoration:none;font-weight:500;color:var(--mute)}
+nav a:hover{color:var(--ink)}
+.hero{padding:9vh 0 7vh;border-bottom:1px solid var(--line)}
+.hero h1{font-family:"Alfa Slab One",serif;font-weight:400;font-size:clamp(64px,17vw,190px);line-height:.88;letter-spacing:-.02em;color:var(--gold)}
+.hero h1 span{display:block;color:var(--ink);margin-left:.4em}
+.hero p{max-width:34ch;margin-top:28px;font-size:20px;color:var(--mute)}
+.btns{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 22px;border-radius:999px;background:var(--gold);color:#24102e;font-weight:700;text-decoration:none}
+.btn.alt{background:none;color:var(--ink);border:2px solid var(--line)}
+.btn:hover{background:var(--coral);color:#fff;border-color:var(--coral)}
+section{padding:64px 0;border-bottom:1px solid var(--line)}
+h2{font-family:"Alfa Slab One",serif;font-weight:400;font-size:clamp(32px,6vw,52px);margin-bottom:28px}
+.grid{display:grid;gap:22px;grid-template-columns:repeat(auto-fill,minmax(230px,1fr))}
+.cover{aspect-ratio:1;border-radius:6px;display:flex;align-items:flex-end;padding:16px;font-family:"Alfa Slab One",serif;font-size:26px;line-height:1.05;color:#24102e}
+.rel h3{margin-top:12px;font-size:18px}
+.rel p{color:var(--mute);font-size:15px}
+.rel a{color:var(--gold);font-weight:700}
+.show{display:grid;grid-template-columns:110px 1fr auto;gap:18px;align-items:center;padding:20px 0;border-top:1px solid var(--line)}
+.show:last-child{border-bottom:1px solid var(--line)}
+.date{font-family:"Alfa Slab One",serif;font-size:26px;color:var(--gold)}
+.show small{color:var(--mute);display:block}
+.tag{font-size:14px;color:var(--mute)}
+.about{display:grid;gap:36px;grid-template-columns:1fr 1fr}
+.about p+p{margin-top:14px}
+.item{background:var(--panel);border-radius:6px;padding:18px}
+.item .swatch{aspect-ratio:4/3;border-radius:4px;background:repeating-linear-gradient(45deg,var(--line) 0 10px,var(--panel) 10px 20px);display:grid;place-items:center;color:var(--mute);font-size:14px}
+.item h3{margin-top:12px;font-size:18px}
+form{display:flex;gap:10px;flex-wrap:wrap;max-width:520px}
+input{flex:1;min-width:200px;padding:12px 16px;border-radius:999px;border:2px solid var(--line);background:var(--panel);color:var(--ink);font:inherit}
+footer{padding:36px 0;color:var(--mute);font-size:15px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+@media(max-width:700px){.about{grid-template-columns:1fr}.show{grid-template-columns:1fr}nav a{margin-left:12px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><a class="logo" href="#top">PR</a>
+<nav><a href="#music">Music</a><a href="#tour">Tour</a><a href="#merch">Merch</a><a href="#about">About</a></nav></div></header>
+
+<main id="top">
+<div class="hero"><div class="wrap">
+<h1>Premo<span>Rice</span></h1>
+<p>Funk, soul and hip hop out of Prince George's County, Maryland. Rapping over his own beats.</p>
+<div class="btns"><a class="btn" href="#tour">Houston tickets</a><a class="btn alt" href="#music">Hear the music</a></div>
+</div></div>
+
+<section id="music"><div class="wrap">
+<h2>Music</h2>
+<div class="grid" id="releases"></div>
+</div></section>
+
+<section id="tour"><div class="wrap">
+<h2>Tour dates</h2>
+<div id="shows"></div>
+<p class="tag" style="margin-top:18px">Want Premo in your city? <a href="mailto:CONTACT_EMAIL_HERE">Send a booking request</a>.</p>
+</div></section>
+
+<section id="merch"><div class="wrap">
+<h2>Merch</h2>
+<div class="grid" id="merchGrid"></div>
+</div></section>
+
+<section id="about"><div class="wrap about">
+<div><h2>About</h2>
+<p>Premo Rice, also known as Mr. Rice and The Bishop, blends funk, soul and hip hop. He started as a producer in 2013, selling beats through Vine, then began rapping on his own production after hearing other artists underdeliver on it.</p>
+<p>He joined Larry June's tour in 2019 and played Day N Vegas in 2021. The Rice Tape reached the Apple Music Top 50 with no major label push.</p></div>
+<div><h2>Stay in the loop</h2>
+<p style="margin-bottom:16px">Get tour dates and new releases first.</p>
+<form id="signup"><input type="email" required placeholder="Your email" aria-label="Email address"><button class="btn" type="submit">Sign up</button></form>
+</div></div></section>
+</main>
+
+<footer><div class="wrap"><span>© <span id="yr"></span> Premo Rice</span>
+<span id="social"></span></div></footer>
+
+<script>
+/* ===== EDIT THIS BLOCK TO UPDATE THE SITE ===== */
+const SITE = {
+  releases: [
+    {title:"The Rice Tape", year:2021, note:"Includes “Right Wriss Pt.2,” “Money Dance,” “Who You Are,” “The Mecca,” “Penthouse Flow.”", link:"#", color:"#ffb81c"},
+    {title:"A Night at the Chateau", year:2019, note:"Includes “Malaysia,” “Silk Sh*t,” “What’s Hannin.”", link:"#", color:"#ff5a76"}
+  ],
+  shows: [
+    {date:"Nov TBD", city:"Houston, TX", venue:"Venue TBA", tickets:"#"}
+  ],
+  merch: [
+    {name:"Tour tee", price:"$30", link:"#"},
+    {name:"Rice Tape vinyl", price:"$40", link:"#"},
+    {name:"Hat", price:"$28", link:"#"}
+  ],
+  social: [
+    {name:"Instagram", url:"#"}, {name:"Spotify", url:"#"}, {name:"Apple Music", url:"#"}, {name:"YouTube", url:"#"}
+  ]
+};
+/* ============================================== */
+const $=id=>document.getElementById(id);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+$("releases").innerHTML=SITE.releases.map(r=>`<article class="rel"><div class="cover" style="background:${r.color}">${esc(r.title)}</div><h3>${esc(r.title)} (${r.year})</h3><p>${esc(r.note)}</p><a href="${esc(r.link)}">Listen</a></article>`).join("");
+$("shows").innerHTML=SITE.shows.map(s=>`<div class="show"><div class="date">${esc(s.date)}</div><div><strong>${esc(s.city)}</strong><small>${esc(s.venue)}</small></div><a class="btn" href="${esc(s.tickets)}">Tickets</a></div>`).join("")||"<p>No dates announced yet. Check back soon.</p>";
+$("merchGrid").innerHTML=SITE.merch.map(m=>`<article class="item"><div class="swatch">Product photo</div><h3>${esc(m.name)}</h3><p class="tag">${esc(m.price)}</p><a href="${esc(m.link)}" class="btn" style="margin-top:10px;padding:8px 18px">Buy</a></article>`).join("");
+$("social").innerHTML=SITE.social.map(s=>`<a href="${esc(s.url)}" style="margin-left:14px">${esc(s.name)}</a>`).join("");
+$("yr").textContent=new Date().getFullYear();
+$("signup").addEventListener("submit",e=>{e.preventDefault();e.target.innerHTML="<p>Thanks, you're on the list.</p>";});
+</script>
+</body>
+</html>
